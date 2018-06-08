@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 require_once('ForceDownload.class.php');
 
@@ -18,6 +20,16 @@ if(isset($_GET['id'])){
 	$a=time();
 	$b=date('d-m-y_H-i-s', $a);
 	$filename = $d['nome'].'_'.$b.'.bat';
+	
+	if(isset($_SESSION['redownload'.$id.''])){
+		
+		$filename = $_SESSION['redownload'.$id.''];
+		header("Location: ./redownload/$filename");
+		
+	} else {
+		
+	
+	
 	$fp = fopen("redownload/$filename", 'a');
 	
 			$linea_cmd = '@echo off
@@ -31,7 +43,10 @@ ECHO.
         echo "ERRORE";
         //exit;
 	} else {
+		$_SESSION['redownload'.$id.''] = $filename;
 		header("Location: ./redownload/$filename");
+	}
+	
 	}
 	
 } else {

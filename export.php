@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('ForceDownload.class.php');
 
 if(file_exists("./restricted/structure.php")){
@@ -25,7 +26,19 @@ $nuovo = explode(";", $dato);
 $a=time();
 $b=date('d-m-y_H-i-s', $a);
 $filename = 'Log_'.$b.'.html';
- 
+
+	if(isset($_SESSION[''.$g.''])){
+		
+		$filename = $_SESSION[''.$g.''];
+		
+		$dir = "./log/";  
+		$file = $filename;
+		$download = New ForceDownload($dir, $file);
+		$download->download() or die ($download->get_error());
+
+		
+	} else {
+		
 foreach($nuovo as $key => $value){
  
 //echo ''.$value.'<br>';
@@ -36,10 +49,18 @@ foreach($nuovo as $key => $value){
  
 }
 
+$_SESSION[''.$g.''] = $filename;
+
 $dir = "./log/";  
 $file = $filename;
 $download = New ForceDownload($dir, $file);
 $download->download() or die ($download->get_error());
+		
+		
+	}
+
+ 
+
 
  
 } else {
