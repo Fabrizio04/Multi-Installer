@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if (file_exists("structure.php")){
 	
@@ -12,12 +13,15 @@ if (file_exists("structure.php")){
 		$q = $c->query("DROP TABLE server");
 	
 		unlink("./structure.php");
+		session_destroy();
 		header("Location: ../setup.html");
 	
 	} else if(isset($_GET['Invia1'])){
 		
 		$q = $c->query("TRUNCATE TABLE pacchetti");
 		$q = $c->query("OPTIMIZE TABLE pacchetti");
+		
+		session_destroy();
 		
 		header("Location: ../costruisci.php");
 	}
