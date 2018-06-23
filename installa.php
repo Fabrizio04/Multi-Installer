@@ -103,21 +103,6 @@ $psw1 = $c->real_escape_string($passServer);
 	
 
 
-/**
-
-$bit24 = substr($chiave, 0, 24);
-$bit8 = substr($chiave, 24, 32);
-
-$key = $bit24;
-$iv = $bit8;
-$bit_check=8;
-
-$md5 = "".decrypt($str,$key,$iv,$bit_check);	
-
-echo $md5;
-
-**/
-
 $fp = fopen("./restricted/structure.php", 'a');
 
 $linea_structure = "";
@@ -140,15 +125,12 @@ if (fwrite($fp, $linea_structure) === FALSE) {
 	header ("Location: fine.html");
 }
 
-} //connessione errore
+}
 
-} else { //if isset
+} else {
 	header ("Location: setup.html");	
 }
 
-
-
-/** ENCRYPT E DECRYPT PHP **/
 
 session_destroy();
 

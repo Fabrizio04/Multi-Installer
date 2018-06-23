@@ -26,7 +26,6 @@ if(file_exists("./restricted/structure.php")){
 			$stringa1 = htmlentities($d['stringa']);
 			$controllo1 = htmlentities($d['controllo1']);
 			
-			//echo $controllo1;
 			
 			$form = '	
 <button class="myButton" onclick="return annulla();">Annulla</button>

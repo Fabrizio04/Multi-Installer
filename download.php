@@ -44,9 +44,6 @@ function download(){
 <script src="js/index.js"></script>
 
 <center>
-<!--
-<h2><a href="setup/<?php if(isset($_SESSION['filename'])){ echo $_SESSION['filename'];}else{echo '#noFile';} ?>">SCARICA E AVVIA IL SETUP</a></h2>-->
-
 
 <?php
 if(isset($_SESSION['programs'])){

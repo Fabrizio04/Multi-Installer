@@ -15,6 +15,12 @@ $fp = fopen("setup/$filename", 'a');
 $linea_cmd = "";
 $programmi_selezionati = "";
 
+$linea_cmd .= "@ECHO off
+title Multi-Installer by Fabrizio Amorelli
+color 70
+
+";
+
 /** **/
 
 if (isset($_GET['uac'])){
@@ -60,9 +66,7 @@ $percorsoRep = $d['rep'];
 $lettera = $d['let'];
 $userServer = $d['us'];
 $passServer = $d['psw'];
-$hash = $d['hash'];
 
-//echo $passServer;
 
 if (isset($_GET['connect'])){
 	
@@ -166,20 +170,7 @@ set '.$proId.'="'.$programma.':_<span_style=\'color:red\'_>Errore</span>_<a_href
 ECHO.
 
 ';
-	
 
-
-
-/**
-
-if exist "C:\Program Files\Java\jre6\bin" (
-set java1625="Java_1.6.25:_<span_style='color:green'_>Installato</span>;"
-) else (
-set java1625="Java_1.6.25:_<span_style='color:red'_>Errore</span>_<a_href='file/java1625.bat'>[Scarica_script]</a>;"
-)
-ECHO.
-
-**/
 
 $programmi_selezionati .= str_replace(" ", "_", ''.$d['nome'].';');
 	}
@@ -187,7 +178,6 @@ $programmi_selezionati .= str_replace(" ", "_", ''.$d['nome'].';');
 	$q = $c->query("SELECT * FROM server");
 	$d = $q->fetch_array();
 	
-	//$linea_cmd .= 'start '.$d['web'].'end.php?html='.$programmi_selezionati.'';
 	
 	$linea_cmd .= '@echo off
 ECHO Disconnessione Server Repository
@@ -211,10 +201,6 @@ ECHO.
 	$tipo = $_GET['tipo'];
 	
 	if($tipo == "exe"){
-		
-		//system("converter\Bat_To_Exe_Converter.exe /bat setup\'$filename' /exe setup\prova.exe /icon converter\favicon.ico");
-		//$filename= "Setup_27-04-18_18-50-57.bat";
-		//system("converter\Bat_To_Exe_Converter.exe /bat setup\'$filename' /exe setup\prova.exe /icon favicon.ico");
 		
 		$a=time();
 		$b=date('d-m-y_H-i-s', $a);

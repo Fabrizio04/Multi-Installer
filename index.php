@@ -35,8 +35,6 @@ function pulisci(){
 
 function clenALL(){
 	
-	//document.getElementById( 'uac' ).checked = true;
-	//document.getElementById( 'connect' ).checked = true;
 	
 	<?php
 	
@@ -49,7 +47,8 @@ function clenALL(){
 	$q = $c->query("SELECT * FROM pacchetti");
 	
 	while($d = $q->fetch_array()){
-		echo 'document.getElementById("'.$d['id'].'").checked = false;';
+		echo 'document.getElementById("'.$d['id'].'").checked = false;
+		';
 	}
 	
 	}
@@ -61,6 +60,75 @@ function ultimo(){
 	location.href='download.php';
 	return false;
 }
+
+function stop(event){
+	
+	var x = event.which || event.keyCod;
+	
+	if (x == 13){
+		return false;
+	}
+	
+}
+
+function controlla(){
+	
+	<?php
+	if(file_exists("./restricted/structure.php")){
+	
+	$q2 = $c->query("SELECT * FROM pacchetti");
+	$n2 = $q2->num_rows;
+	$d2 = $q2->fetch_array();
+	
+	if (($n2 == 1) && ($n2 != 0)) {
+		echo 'var spu = document.getElementById("'.$d2['id'].'").checked;
+		';
+	?>
+	
+	if( spu == false ) {
+		return false;
+	} else {
+		return true;
+	}
+	
+	<?php
+	} else {
+		
+		$c  = new mysqli($host,$usDB,$passDB,$database);
+
+		$q = $c->query("SELECT * FROM pacchetti ORDER BY nome");
+
+		$n = $q->num_rows;
+		
+		while($d = $q->fetch_array()){
+			echo 'var spu'.$d['id'].' = document.getElementById("'.$d['id'].'").checked;
+			';
+		}
+		
+		$q2 = $c->query("SELECT * FROM pacchetti ORDER BY nome");
+		$d2 = $q2->fetch_array();
+		
+		?>
+		
+		
+		if ( (spu<?php echo $d2['id']; ?> == false ) <?php $q3 = $c->query('SELECT * FROM pacchetti WHERE id<>'.$d2['id'].' ORDER BY nome'); $n3 = $q3->num_rows; if($n != 0){ while($d3 = $q3->fetch_array()){ echo '&& (spu'.$d3['id'].' == false) '; } } ?>)
+		
+		{
+		return false;
+		
+		} else {
+			return true;
+		}
+		
+		<?php
+		
+	}
+	
+	}
+	?>
+	
+}
+
 </script>
 
 </head>
@@ -115,7 +183,7 @@ if($n == 0){
 	
 	if (isset($_SESSION['filename'])){ $ultimo = '<button class="myButton" onclick="javascript: return ultimo();">Ultimo Setup</button>'; }else{ $ultimo = ""; }
 	
-	echo '<form method="GET" action="execute.php" id="spunta" name="spunta">
+	echo '<form method="GET" action="execute.php" id="spunta" name="spunta" onsubmit="return controlla()">
 
 <input type="submit" value="Download" class="myButton" name="Invia"> <button class="myButton" onclick="return pulisci();">Pulisci</button> '.$ultimo.'
 <br>
@@ -140,7 +208,7 @@ if($n == 0){
 </table>
 <br>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ricerca pacchetti..." title="Ricerca pacchetti..." autocomplete="off">
+<input type="text" id="myInput" onkeypress="return stop(event);" onkeyup="myFunction()" placeholder="Ricerca pacchetti..." title="Ricerca pacchetti..." autocomplete="off">
 
 </div>
 
@@ -149,8 +217,8 @@ if($n == 0){
 <ul id="myUL">';
 	
 	while($d = $q->fetch_array()){
-		//echo $d['nome'];
-		//echo '<li><a href="javascript: spunta(\''.$d['id'].'\');"><strong>'.$d['nome'].'</strong> <input type="checkbox" style="cursor: pointer;" id="'.$d['id'].'" name="nomeVar[]" value="'.$d['id'].'"></li></a>';
+		
+		
 		echo '<li><a href="javascript: spunta(\''.$d['id'].'\');"><strong>'.$d['nome'].'</strong> <input type="checkbox" style="cursor: pointer;" id="'.$d['id'].'" name="nomeVar[]" value="'.$d['id'].'"></li></a>';
 	}
 	
@@ -166,7 +234,7 @@ if($n == 0){
 	
 } else {
 	header ("Location: setup.html");	
-}//style="text-align:center; valign: middle;"
+}
 
 ?>
 
@@ -193,7 +261,7 @@ function myFunction() {
 
 <br><br>
 
-<a href="#top" class="UP" id="f_up" style="display: none;"><img src="./img/freccia.png" width="125px" height="120px"></a><!-- http://i.imgur.com/2qXWm.png -->
+<a href="#top" class="UP" id="f_up" style="display: none;"><img src="./img/freccia.png" width="125px" height="120px"></a>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -207,7 +275,7 @@ $(document).ready(function(){
 				if(statusF!='in' && $(this).scrollTop()>25){statusF='in'; $('#f_up').fadeIn()}
 				else if(statusF!='out' && $(this).scrollTop()<25){statusF='out'; $('#f_up').fadeOut()}
 			});
-		}		//$('.UP').click(function(){ $('body,html').animate({scrollTop:0},600); return false})
+		}
 	})
 })
 </script>

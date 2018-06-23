@@ -141,7 +141,6 @@ if ((strlen($passDB)) == 0){
 <br><br>
 
 <?php
-//qui faccio la sessione
 $_SESSION['percorsoWeb'] = $percorsoWeb;
 $_SESSION['percorsoRep'] = $percorsoRep;
 $_SESSION['lettera'] = $lettera;

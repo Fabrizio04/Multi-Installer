@@ -115,7 +115,7 @@ if($n == 0){
 <ul id="myUL">';
 	
 	while($d = $q->fetch_array()){
-		//echo $d['nome'];
+		
 		echo '<li><a href="edit.php?id='.$d['id'].'"><strong>'.$d['nome'].'</strong> &#91;'.$d['stringa'].'&#93; &#91'.$d['controllo1'].'&#93;</li></a>';
 	}
 	
@@ -131,7 +131,7 @@ if($n == 0){
 	
 } else {
 	header ("Location: setup.html");
-}//style="text-align:center; valign: middle;"
+}
 
 ?>
 
@@ -172,7 +172,7 @@ $(document).ready(function(){
 				if(statusF!='in' && $(this).scrollTop()>25){statusF='in'; $('#f_up').fadeIn()}
 				else if(statusF!='out' && $(this).scrollTop()<25){statusF='out'; $('#f_up').fadeOut()}
 			});
-		}		//$('.UP').click(function(){ $('body,html').animate({scrollTop:0},600); return false})
+		}
 	})
 })
 </script>
