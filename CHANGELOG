@@ -3,3 +3,4 @@
 2.2 - Corretto bug nella connessione al server rep. senza credenziali.
 2.3 - Aggiornato manuale e pagina info, corretto bug nelle impostazioni rep. e importati Fonts.
 2.4 - Modificato export e reDownload
+2.5 - Corretto errore nella barra di ricerca ed implementato controllo submit. Corretto errore nel ripristino. Modificato colore prompt e pulito sorgente.
