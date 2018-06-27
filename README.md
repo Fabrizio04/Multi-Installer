@@ -10,11 +10,12 @@ Multi-Installer è
 ### Info
 
 Versione: 2.5
+
 Anno: 2018 
+
 Released By: Fabrizio Amorelli
 
-
 ### Installazione
-
+o
 Consultare il [manuale](manuali/Installazione_Configurazione_Multinstaller.txt) all'interno della cartella dedicata per le istruzioni d'installazione e d'uso.
 
