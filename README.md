@@ -16,5 +16,5 @@ Anno: 2018
 Released By: Fabrizio Amorelli
 
 ### Installazione
-- Consultare il [manuale](manuali/Installazione_Configurazione_Multinstaller.pdf) all'interno della cartella dedicata per le istruzioni d'installazione e d'uso.
+-Consultare il [manuale](manuali/Installazione_Configurazione_Multinstaller.pdf) all'interno della cartella dedicata per le istruzioni d'installazione e d'uso.
 
