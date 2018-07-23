@@ -20,7 +20,7 @@ if ( (isset($_GET['Invia'])) && (isset($_GET['nome'])) && (isset($_GET['stringa'
 		header ("Location: costruisci.php");
 
 	} else {		
-		header ("Location: setup.html");
+		header ("Location: ./websetup");
 	}
 	
 } else {

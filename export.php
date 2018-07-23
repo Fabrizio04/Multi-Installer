@@ -68,7 +68,7 @@ $download->download() or die ($download->get_error());
 }
 
 } else {
-	header("Location: setup.html");
+	header("Location: ./websetup");
 }
  
 ?>

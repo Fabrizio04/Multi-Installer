@@ -7,6 +7,7 @@
 <title>Multi-Installer</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" content="Multi-Installer è un programma Gratuito e Open Source, che ti permette di installare tanti software su Windows.">
 
 <link rel="shortcut icon" href="img/favicon.ico" />
 
@@ -54,7 +55,10 @@ $dato = str_replace("_", " ", $g);
  
 $nuovo = explode(";", $dato);
 
-echo '<br><br><br><button class="myButton" onclick="download()">SCARICA E AVVIA IL SETUP</button>
+
+if(isset($_SESSION['filename'])){ echo '<br><h2>'.$_SESSION['filename'].'</h2>'; } else {echo '#noFile';}
+
+echo '<button class="myButton" onclick="download()">SCARICA E AVVIA IL SETUP</button>
 
 <br><br><br><button class="myButton3" onclick="javascript: location.href=\'./\';">HOME</button>
 

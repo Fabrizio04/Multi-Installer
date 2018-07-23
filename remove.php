@@ -19,7 +19,7 @@ if (isset($_GET['id']) ) {
 		header ("Location: costruisci.php");
 
 	} else {
-		header ("Location: setup.html");
+		header ("Location: ./websetup");
 	}
 	
 } else {

@@ -28,7 +28,7 @@ if ( (isset($_POST['Invia'])) && (isset($_POST['nome'])) && (isset($_POST['strin
 		header ("Location: costruisci.php");
 
 	} else {		
-		header ("Location: setup.html");
+		header ("Location: ./websetup");
 	}
 	
 } else {

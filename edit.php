@@ -68,7 +68,7 @@ if(file_exists("./restricted/structure.php")){
 	}
 
 } else {
-	header ("Location: setup.html");
+	header ("Location: ./websetup");
 }
 ?>
 <!DOCTYPE html>
@@ -77,6 +77,9 @@ if(file_exists("./restricted/structure.php")){
 
 <head>
 <title>Multi-Installer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" content="Multi-Installer è un programma Gratuito e Open Source, che ti permette di installare tanti software su Windows.">
 
 <link rel="shortcut icon" href="img/favicon.ico" />
 
