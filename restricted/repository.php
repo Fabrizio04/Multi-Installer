@@ -8,6 +8,7 @@ session_start();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" content="Multi-Installer è un programma Gratuito e Open Source, che ti permette di installare tanti software su Windows.">
 <title>Multi-Installer</title>
 
 <link rel="shortcut icon" href="../img/favicon.ico" />
@@ -67,7 +68,7 @@ if(file_exists("structure.php")){
 	$passServer = $d['psw'];
 	
 } else {
-	header ("Location: ../setup.html");
+	header ("Location: ../websetup");
 }
 ?>
 
