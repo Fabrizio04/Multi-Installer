@@ -233,7 +233,7 @@ if($n == 0){
 
 	
 } else {
-	header ("Location: setup.html");	
+	header ("Location: ./websetup");	
 }
 
 ?>
