@@ -1,5 +1,13 @@
 <?php
-$percorso = "http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
+if(isset($_SERVER['HTTPS'])) {
+    if ($_SERVER['HTTPS'] == "on") {
+        $percorso = "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+    }
+} else {
+	$percorso = "http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+}
+
 $npercorso = str_replace("websetup/", "", $percorso);
 
 if(file_exists("../restricted/structure.php")){
