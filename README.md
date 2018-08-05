@@ -9,7 +9,7 @@ Multi-Installer è
 
 ### Info
 
-Versione: 2.6
+Versione: 2.7
 
 Anno: 2018 
 
