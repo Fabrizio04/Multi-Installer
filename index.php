@@ -23,8 +23,10 @@ function spunta(param){
 	
 	if (a == false){
 		document.getElementById( param ).checked = true;
+		document.getElementById( "scelta"+param ).style = 'background-color:#73e600;';
 	} else {
 		document.getElementById( param ).checked = false;
+		document.getElementById( "scelta"+param ).style = 'background-color:#ff8c66;';
 	}
 
 }
@@ -220,7 +222,7 @@ if($n == 0){
 	while($d = $q->fetch_array()){
 		
 		
-		echo '<li><a href="javascript: spunta(\''.$d['id'].'\');"><strong>'.$d['nome'].'</strong> <input type="checkbox" style="cursor: pointer;" id="'.$d['id'].'" name="nomeVar[]" value="'.$d['id'].'"></li></a>';
+		echo '<li><a id="scelta'.$d['id'].'" href="javascript: spunta(\''.$d['id'].'\');"><strong>'.$d['nome'].'</strong> <input type="checkbox" style="display: none;" id="'.$d['id'].'" name="nomeVar[]" value="'.$d['id'].'"></li></a>';
 	}
 	
 	echo '</ul>
