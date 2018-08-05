@@ -5,3 +5,4 @@
 2.4 - Modificato export e reDownload
 2.5 - Corretto errore nella barra di ricerca ed implementato controllo submit. Corretto errore nel ripristino. Modificato colore prompt e pulito sorgente.
 2.6 - Separato Web Setup iniziale, aggiornata descrizione programma. Inserito nome del file nel Download. Inserito changelog nell'about.
+2.7 - Modificata visualizzazione lista, aggiunti colori e rimossa checkbox.
