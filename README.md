@@ -3,9 +3,13 @@
 
 Multi-Installer è 
 
-- [x] un prodotto italiano, Gratuito e Open Source
-- [x] compatibile con tutti i Browsers moderni (su Internet Explorer, disattivando la visualizzazione in compatibilità)
-- [x] compatibile con i sistemi Windows 7-8.1-10, il supporto per XP non è garantito.
+- [x] Un prodotto italiano, Gratuito e Open Source
+- [x] Compatibile con tutti i Browsers più moderni:
+- Google Chrome
+- Mozilla Firefox
+- Opera
+- Microsoft Edge
+- [x] Compatibile con i sistemi Windows 7-8.1-10, il supporto per XP non è garantito.
 
 ### Info
 
