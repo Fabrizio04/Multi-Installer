@@ -1,5 +1,5 @@
 # Multi-Installer
-## una piccola soluzione, per il tuo I.T. più semplice e divertente.
+## Una piccola soluzione, per il tuo I.T. più semplice e divertente.
 
 Multi-Installer è 
 
