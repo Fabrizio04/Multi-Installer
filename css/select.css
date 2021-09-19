@@ -1,0 +1,11 @@
+select {
+	width:35%;
+	height: 40px;
+	background: #cccccc;
+}
+
+@media screen and (max-width: 997px) {
+	select {
+		width:90%;
+	}
+}

@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+	background-color: #d9d9d9;
+}
+
+h2 {
+	font-size: 2em;
+	margin: .67em;
+}
+
+.main {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	text-align: center;
+	
+}
+
+input[type=text], input[type=url], input[type=password] {
+	width: 25%;
+    margin-top: 1rem;
+    padding: 6px 10px 6px 10px;
+    border: 1px solid #ccc;
+	text-align: center;
+}
+
+#sendForm {
+    background-color: #212121;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 10%;
+}
+
+#sendForm:hover {
+    background-color: #404040;
+    color: white;
+}
+
+select {
+    width: 50%;
+    height: 30px;
+    background: #cccccc;
+	text-align: center;
+}
+
+@media screen and (max-width: 997px) {
+	select {
+		width: 90%;
+	}
+	#sendForm {
+		width: 90%;
+	}
+	
+	input[type=text], input[type=url], input[type=password] {
+		width: 90%;
+	}
+	
+	
+	.main {
+		top: 60%;
+	}
+	
+	button {
+		margin-bottom: 25px;
+	}
+		
+}
