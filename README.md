@@ -13,12 +13,12 @@ Multi-Installer è
 
 ### Info
 
-Versione: 2.7
+Versione: 3.0<img src="https://multi-installer.it/img/new.gif" width="30" height="20">
 
-Anno: 2018 
+Anno: 2018-2021
 
 Released By: Fabrizio Amorelli
 
 ### Installazione
-- Consultare il [manuale](manuali/Installazione_Configurazione_Multinstaller.pdf) all'interno della cartella dedicata per le istruzioni d'installazione e d'uso.
+- Consultare il [manuale](manuali/Multinstaller.pdf) all'interno della cartella dedicata per le istruzioni d'installazione e d'uso.
 
