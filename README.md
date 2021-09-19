@@ -13,7 +13,7 @@ Multi-Installer è
 
 ### Info
 
-Versione: 3.0<img src="https://multi-installer.it/img/new.gif" width="30" height="20">
+Versione: 3.0 <img src="https://multi-installer.it/img/new.gif" width="30" height="20">
 
 Anno: 2018-2021
 
