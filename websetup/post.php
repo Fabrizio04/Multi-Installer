@@ -189,7 +189,7 @@ if($passDB != "") $passDB = encrypt_decrypt("decrypt", $passDB, "./core/key.txt"
 	$info->Actions->Exec->Command[0] = realpath('../')."\\core\clean.bat";
 	$info->Triggers->CalendarTrigger->StartBoundary[0] = $date->format("Y-m-d")."T00:00:00";	
 	$sid = explode(" ", trim(shell_exec("wmic useraccount where name='%username%' get sid")));
-	$id = trim($sid[45]);
+	$id = end($sid);
 	$info->Principals->Principal->UserId[0] = $id;
 	
 	$info->asXML('../core/Clean Setup.xml');
