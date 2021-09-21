@@ -6,8 +6,9 @@ v3.0 - Based on WS Edition (https://multi-installer.it)
 - Modificata gestione UAC Windows
 - Inserito Wizard Pack
 - Inserita Firma Digitale
-- Inserita cronologia
-- Inserito log richieste, pulizia setup
+- Inserita Cronologia
+- Inserito Log Richieste, Pulizia Setup
+- Inserito File Manager
 
 ########
 
@@ -18,7 +19,7 @@ v3.0 - Based on WS Edition (https://multi-installer.it)
 2.3 - Aggiornato manuale e pagina info, corretto bug nelle impostazioni rep. e importati Fonts.
 2.2 - Corretto bug nella connessione al server rep. senza credenziali.
 2.1 - Corretti alcuni bug, fissato menù superiore.
-2.0 - Release iniziale.
+2.0 - Prima release iniziale Open Source.
 
 ########
 
